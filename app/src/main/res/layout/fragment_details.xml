@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".ui.details.DetailsFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/share_iv"
+        android:layout_width="@dimen/toolbar_icon_size"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+
+    <ImageView
+        android:id="@+id/postIV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/details_header_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/postTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:layout_marginTop="@dimen/default_margin_for_start_and_end"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/title_font_size"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postIV" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/postTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:layout_marginTop="@dimen/default_margin_for_start_and_end"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTitle" />
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/username" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:layout_marginTop="@dimen/default_margin_for_start_and_end"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/userIcon"
+        app:layout_constraintTop_toBottomOf="@+id/postTime" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@+id/locationCity"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/locationCity" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/locationCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:layout_marginTop="@dimen/default_margin_for_start_and_end"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/locationIcon"
+        app:layout_constraintTop_toBottomOf="@+id/postTime" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/postBody"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_margin_for_start_and_end"
+        android:layout_marginTop="@dimen/body_bottom_top_margin"
+        android:layout_marginEnd="@dimen/default_margin_for_start_and_end"
+        android:layout_marginBottom="@dimen/body_bottom_top_margin"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+</androidx.constraintlayout.widget.ConstraintLayout>

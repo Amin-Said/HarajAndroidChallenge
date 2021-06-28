@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HarajTask</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="since_time">Since</string>
+    <string name="since_time">منذ</string>
 
     <plurals name="days_count">
         <item quantity="one">منذ يوم</item>
